@@ -1,12 +1,12 @@
-scalaVersion := "2.12.1"
+scalaVersion := "2.12.4"
 
-crossScalaVersions := Seq("2.12.1", "2.11.8", "2.10.6")
+crossScalaVersions := Seq("2.12.4", "2.11.11", "2.10.6")
 
 organization in Global := "com.hypertino"
 
 lazy val library = crossProject.settings(publishSettings:_*).settings(
   name := "inflector",
-  version := "1.0.6",
+  version := "1.0.7",
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
   publishArtifact := true,
   publishArtifact in Test := false
@@ -68,7 +68,3 @@ credentials ++= (for {
 publishArtifact in Test := false
 
 publishArtifact := false
-
-publish := ()
-
-publishLocal := ()
